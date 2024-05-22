@@ -1,0 +1,42 @@
+
+
+<html>
+  <head>
+    <title>A-Pear-antly Great Delivery</title>
+    <link href="style.css" rel="stylesheet" />
+    <!--PartnerStackJS Code-->
+    <script type='text/javascript'>(function() {var gs = document.createElement('script');gs.src = 'https://js.partnerstack.com/v1/';gs.type = 'text/javascript';gs.async = 'true';gs.onload = gs.onreadystatechange = function() {var rs = this.readyState;if (rs && rs != 'complete' && rs != 'loaded') return;try {growsumo._initialize('pk_5YRhMuFimz9ObKbJLlXTXIEJtKKaTDyh'); if (typeof(growsumoInit) === 'function') {growsumoInit();}} catch (e) {}};var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gs, s);})();</script>
+    </script>
+    
+  </head>
+  <body>
+    
+    <form id="sign-up">
+      <label for="name">Your name</label>
+      <input id="name" type="text" name="name" id="name" />
+      <label for="email">Your email:</label>
+      <input id="email" type="email" name="email" id="email" />
+      <label for="password">Password:</label>
+      <input id="password" type="password" name="password" required>
+    
+      <input type="submit" id="submit-btn" value="Submit" />
+    </form>
+
+    <script type="text/javascript">
+        function partnerStackSignUp() {
+            // 1. Populate the growsumo.data object
+            growsumo.data.name = document.getElementById('name').value;
+            growsumo.data.email = document.getElementById('email').value;
+            // In this case, email is how I uniquely identify my customers
+            growsumo.data.customer_key = document.getElementById('email').value;
+            
+            // Register the signup with PartnerStack
+            growsumo.createSignup();
+        }
+
+        document.getElementById('sign-up').addEventListener('submit', function(e){
+            partnerStackSignUp();
+        });
+    </script>
+  </body>
+</html>
